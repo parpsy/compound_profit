@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compound Profit Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-md w-96">
+      <h1 class="text-2xl mb-4">Compound Profit Calculator</h1>
+      <form method="POST">
+        <label for="balance" class="block mb-2">Initial Balance:</label>
+        <input
+          type="text"
+          class="w-full border rounded px-3 py-2 mb-3"
+          name="balance"
+          required
+        />
+
+        <label for="days" class="block mb-2">Number of Days:</label>
+        <input
+          type="text"
+          class="w-full border rounded px-3 py-2 mb-3"
+          name="days"
+          required
+        />
+
+        <label for="profit_percent" class="block mb-2"
+          >Profit Percentage:</label
+        >
+        <input
+          type="text"
+          class="w-full border rounded px-3 py-2 mb-3"
+          name="profit_percent"
+          required
+        />
+
+        <button
+          type="submit"
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Calculate
+        </button>
+      </form>
+      {% if error_message %}
+      <p class="text-red-500 mt-3">{{ error_message }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
