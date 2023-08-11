@@ -1,0 +1,5 @@
+name = "app"
+type = "javascript"
+
+[build]
+command = "source venv/bin/activate && python app.py" # The command to run your Flask app
